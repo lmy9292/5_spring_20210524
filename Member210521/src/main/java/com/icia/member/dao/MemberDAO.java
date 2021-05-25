@@ -23,6 +23,21 @@ public class MemberDAO{
 	public MemberDTO memberView(String mid) {
 		//selectOne:하나의 결과만 나타낼려고 할때 쓴다
 		return sql.selectOne("mm.memberview",mid);
+	}
+	public String memberLogin(MemberDTO member) {
+		return sql.selectOne("mm.memberlogin",member);
+	}	
+		
+	public MemberDTO update(String loginId) {
+		return sql.selectOne("mm.memberupdate",loginId);
+	}
+	public int updateProcess(MemberDTO member) {
+		return sql.update("mm.updateprocess",member);
+	}
+	public void memberDelete(String mid) {
+		sql.delete("mm.memberdelete",mid);
+		
+		
 	}	
 	
 	
