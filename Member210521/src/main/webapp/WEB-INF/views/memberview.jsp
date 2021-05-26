@@ -25,6 +25,7 @@
 	</tr>
 	<c:forEach var="member" items="${memberList}">
 	<tr>
+	<!-- EL(Expression Language)태그 -->
 		<td>${member.mid}</td>
 		<td>${member.mpassword}</td>
 		<td>${member.mname}</td>
